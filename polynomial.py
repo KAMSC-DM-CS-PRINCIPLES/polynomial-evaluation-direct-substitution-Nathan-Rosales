@@ -14,7 +14,7 @@ def evaluate_polynomial(degree, x, constant_term, *coefficients):
         a += 1
         k += 1
     
-    print(S)
+    return(S)
     
 
 if __name__ == "__main__":
