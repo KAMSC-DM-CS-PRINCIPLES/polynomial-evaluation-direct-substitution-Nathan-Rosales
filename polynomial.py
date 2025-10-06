@@ -5,7 +5,7 @@ def evaluate_polynomial(degree, x, constant_term, *coefficients):
     # TODO: Return final polynomial result
 
     if(len(coefficients)!=degree):
-        return("Invalid list")
+        return("Should have raised ValueError")
 
     S = constant_term
     k = 1
