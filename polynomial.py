@@ -23,13 +23,18 @@ if __name__ == "__main__":
     # TODO: Call evaluate_polynomial function
     # TODO: Ask user if they want to run again
 
-    degree = int(input("Degree of the polynomial: "))
-    x = int(input("Value of x: "))
-    constant_term = int(input("Value of constant term: "))
+    answer = "y"
 
-    coefficients = ()
+    while(answer=="y"):
+        degree = int(input("Degree of the polynomial: "))
+        x = int(input("Value of x: "))
+        constant_term = int(input("Value of constant term: "))
 
-    for i in range(1, degree+1):
-        coefficients += (int(input(f"Coefficient of the x^{i} term:")),)
-    
-    evaluate_polynomial(degree, x, constant_term, coefficients)
+        coefficients = ()
+
+        for i in range(1, degree+1):
+            coefficients += (int(input(f"Coefficient of the x^{i} term: ")),)
+        
+        print("P(x) = " + str(evaluate_polynomial(degree, x, constant_term, coefficients)))
+
+        answer = input("Do you want to evaluate another polynomial? (y/n): ")
