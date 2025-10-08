@@ -4,7 +4,7 @@ def evaluate_polynomial(degree, x, constant_term, *coefficients):
     # TODO: Print step-by-step evaluation (S0, S1, S2, etc.)
     # TODO: Return final polynomial result
 
-    if(len(coefficients)!=degree):
+    if(len(coefficients[0])!=degree):
         raise ValueError("needs " + str(degree) + " coefficient(s)")
 
     S = constant_term
@@ -12,7 +12,7 @@ def evaluate_polynomial(degree, x, constant_term, *coefficients):
 
     a = 0
     while k<=degree:
-        num = coefficients[a]
+        num = coefficients[0][a]
         S += num*(x**k)
         a += 1
         k += 1
@@ -40,6 +40,6 @@ if __name__ == "__main__":
         
         print("")
         print("P(x) = " + str(evaluate_polynomial(degree, x, constant_term, coefficients)))
-
+        print("")
         answer = input("Do you want to evaluate another polynomial? (y/n): ")
         print("")
