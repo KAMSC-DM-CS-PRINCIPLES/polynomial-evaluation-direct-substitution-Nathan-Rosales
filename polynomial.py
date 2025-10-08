@@ -4,8 +4,8 @@ def evaluate_polynomial(degree, x, constant_term, *coefficients):
     # TODO: Print step-by-step evaluation (S0, S1, S2, etc.)
     # TODO: Return final polynomial result
 
-    if(len(coefficients)!=degree):
-        raise ValueError("needs " + str(degree) + " coefficient(s)")
+    #if(len(coefficients)!=degree):
+     #   raise ValueError("needs " + str(degree) + " coefficient(s)")
 
     S = constant_term
     k = 1
