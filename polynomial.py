@@ -38,6 +38,8 @@ if __name__ == "__main__":
         for i in range(1, degree+1):
             coefficients += (int(input(f"Coefficient of the x^{i} term: ")),)
         
+        print("")
         print("P(x) = " + str(evaluate_polynomial(degree, x, constant_term, coefficients)))
 
         answer = input("Do you want to evaluate another polynomial? (y/n): ")
+        print("")
