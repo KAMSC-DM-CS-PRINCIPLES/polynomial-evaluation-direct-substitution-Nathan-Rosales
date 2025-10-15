@@ -3,18 +3,19 @@ def evaluate_polynomial(degree, x, constant_term, *coefficients):
     # TODO: Print step-by-step evaluation (S0, S1, S2, etc.)
     # TODO: Return final polynomial result
 
-    if(len(coefficients)!=degree):
+    if(len(coefficients[0])!=degree):
         raise ValueError("needs " + str(degree) + " coefficient(s)")
 
-    S = constant_term
+    S = coefficients[degree-1]
     k = 1
 
-    a = 0
-    while k<=degree:
+    a = degree-2
+    while k<degree:
         num = coefficients[a]
-        S += num*(x**k)
-        a += 1
+        S = S*x + num
+        a -= 1
         k += 1
+    S = S*x + constant_term
     
     return(S)
     
